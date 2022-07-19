@@ -1,22 +1,16 @@
-import pandas as pan
+import turtle
 
-data = pan.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+screen = turtle.Screen()
+screen.title("USA States Game")
+image = "download.gif"
+screen.addshape(image)
+turtle.shape(image)
 
-furEnt = ["Gray", "Red", "Black"]
+answerState - screen.textinput(title="Guess teh state", prompt="What is another state's name?")
 
-blackCount = len(data[data["Primary Fur Color"] == "Black"])
-grayCount = len(data[data["Primary Fur Color"] == "Gray"])
-redCount = len(data[data["Primary Fur Color"] == "Cinnamon"])
+# def getMouseClickCoor(x, y):
+#     print(x, y)
+# turtle.onscreenclick(getMouseClickCoor)
+# turtle.mainloop()
 
-print(blackCount)
-print(grayCount)
-print(redCount)
-
-finDict = {
-    "Fur Color" : furEnt,
-    "Count" : [grayCount, redCount, blackCount]
-}
-
-finData = pan.DataFrame(finDict)
-
-print(finData.to_csv("sColorCount.csv"))
+# screen.exitonclick()
